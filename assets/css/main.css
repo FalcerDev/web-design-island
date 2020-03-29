@@ -14,6 +14,7 @@
 * {
   outline: none;
   box-sizing: border-box;
+  transition: all .25s ease-in-out;
 }
 
 /* Font Style */
@@ -33,6 +34,7 @@ body {
   font-family: 'EB Garamond', serif;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -135,4 +137,109 @@ a {
 
 .card-item p span {
   opacity: .5;
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 1280px) {
+  .hamburger {
+    display: flex;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 32px 32px 0 0;
+    z-index: 999;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-white);
+    position: relative;
+  }
+
+  .hamburger span::before,
+  .hamburger span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-white);
+    transition: all .25s ease-in-out;
+  }
+
+  .hamburger span::before {
+    top: -10px;
+  }
+
+  .hamburger span::after {
+    top: 10px;
+  }
+
+  .hamburger.active span {
+    background-color: transparent;
+  }
+
+  .hamburger.active span::before,
+  .hamburger.active span::after {
+    top: 0;
+  }
+
+  .hamburger.active span::before {
+    transform: rotate(45deg);
+  }
+
+  .hamburger.active span::after {
+    transform: rotate(-45deg);
+  }
+
+  .navbar-menu {
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: -100%;
+    width: 100%; /* % -> percent of parent */
+    height: 100vh; /* vh -> percent of browser window */
+    z-index: 998;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(20, 20, 20, .95);
+    filter: unset !important;
+  }
+
+  .navbar-menu.active {
+    right: 0%;
+  }
+
+  .navbar-menu a {
+    margin: 24px 0;
+    font-size: 1.8em;
+    font-family: 'EB Garamond', serif;
+  }
+
+  .hero-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-wrapper * {
+    text-align: center;
+  }
+
+  .hero-wrapper h1 {
+    margin-bottom: .5em;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .hero-wrapper h1 {
+    font-size: 3em;
+    margin-bottom: 1em;
+  }
 }
