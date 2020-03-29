@@ -10,4 +10,4 @@ Loading Page
 
 Unsupported Device Screen
 
-![Unsupported Device Screen](https://raw.githubusercontent.com/FalcerDev/web-design-island/master/Preview/Unsupported%20Device%20Screen.png)
+![Unsupported Device Screen](https://raw.githubusercontent.com/FalcerDev/web-design-island/master/Preview/Unsupported%20Screen.png)
