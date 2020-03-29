@@ -1,0 +1,21 @@
+/* Normalization */
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Variable */
+:root {
+  --colot-white: #fff;
+  --color-green-light: #bebe9c;
+  --color-green-dark: #bba665;
+  --color-green-darker: #60583f;
+  --color-green-gradient-start: rgba(97, 83, 58, 0.8);
+  --color-green-gradient-end: rgba(65, 58, 37, 0.8);
+  --color-black-gradient-start: rgba(54, 54, 54, 0);
+  --color-black-gradient-end: rgba(20, 20, 20, 0.5);
+}
+
+/* Font Style */
+/* font-family: 'EB Garamond', serif; */
+/* font-family: 'Lato', sans-serif; */
