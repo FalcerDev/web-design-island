@@ -79,6 +79,60 @@ a {
 }
 
 .hero-wrapper {
+  width: 100%;
   display: flex;
   align-items: flex-end;
+  color: var(--color-green-light);
+}
+
+.hero-wrapper h1 {
+  font-size: 6.5em;
+  flex: 1;
+}
+
+.hero-wrapper p {
+  width: 500px;
+  font-size: 1.3em;
+  transform: translateY(-32px);
+}
+
+/* Card */
+.card {
+  width: 100%;
+  display: flex;
+}
+
+.card-item {
+  flex: 1;
+  padding-bottom: .4em;
+  border-bottom: 2px solid var(--color-green-gradient-start);
+  position: relative;
+  cursor: pointer;
+}
+
+.card-item::after{
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  width: 0%;
+  height: 4px;
+  background-color: var(--color-green-dark);
+  transition: all .25s ease-in-out;
+}
+
+.card-item:hover::after{
+  width: 100%;
+}
+
+.card-item.active::after{
+  width: 100%;
+}
+
+.card-item p {
+  color: var(--color-green-light);
+  font-size: 1.6em;
+}
+
+.card-item p span {
+  opacity: .5;
 }
